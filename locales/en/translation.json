@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "works": "Works",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome to My Portfolio",
+    "subtitle": "I create minimalist and thoughtful digital experiences inspired by Japanese aesthetics."
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I'm a designer and developer with a passion for creating digital experiences that embody simplicity and elegance..."
+  }
+}
