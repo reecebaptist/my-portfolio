@@ -1,48 +1,56 @@
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 
-const PageTransitionContainer = styled(motion.div)`
+const TransitionOverlay = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: '#f5f5f5';
-  z-index: 1000;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 `;
 
-const LoadingText = styled(motion.div)`
-  font-family: "'Times New Roman', 'Hiragino Mincho ProN', serif";
-  font-size: 1.5rem;
+const LoadingLine = styled(motion.div)`
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 `;
 
 interface PageTransitionProps {
-  children: ReactNode;
+  isVisible: boolean;
 }
 
-const PageTransition = ({ children }: PageTransitionProps) => {
+const PageTransition = ({ isVisible }: PageTransitionProps) => {
   return (
-    <>
-      <PageTransitionContainer
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        exit={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
-      >
-        <LoadingText
+    <AnimatePresence>
+      {isVisible && (
+        <TransitionOverlay
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ repeat: Infinity, duration: 1.5, repeatType: 'reverse' }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          Loading...
-        </LoadingText>
-      </PageTransitionContainer>
-      {children}
-    </>
+          <LoadingLine
+            initial={{ width: 0 }}
+            animate={{
+              width: "100%",
+              transition: {
+                duration: 0.8,
+                ease: [0.65, 0, 0.35, 1]
+              }
+            }}
+          />
+        </TransitionOverlay>
+      )}
+    </AnimatePresence>
   );
 };
 

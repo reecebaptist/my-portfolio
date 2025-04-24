@@ -20,15 +20,15 @@ const ContactTitle = styled(motion.h2)`
   position: relative;
   display: inline-block;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50%;
-    height: 1px;
-    background-color: black;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: -8px;
+  //   left: 0;
+  //   width: 50%;
+  //   height: 1px;
+  //   background-color: black;
+  // }
 `;
 
 const ContactList = styled(motion.ul)`

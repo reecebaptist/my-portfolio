@@ -15,7 +15,7 @@ const Footer = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
     >
-      © {new Date().getFullYear()} My Portfolio. All rights reserved.
+      © {new Date().getFullYear()} Reece Dsouza. All rights reserved.
     </FooterContainer>
   );
 };

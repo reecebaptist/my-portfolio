@@ -11,17 +11,18 @@ const ButtonContainer = styled.div`
 
 const MinimalButton = styled(motion.button)`
   background: transparent;
-  color: 111111;
+  color: black;
   font-family: 'Times New Roman', serif;
   font-size: 1rem;
   padding: 0.8rem 2rem;
-  border: 1px solid inherit;
+  border: 1px solid black;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
   margin-top: 2rem;
-  
+  z-index: 0;
+
   &::before {
     content: '';
     position: absolute;
@@ -29,14 +30,14 @@ const MinimalButton = styled(motion.button)`
     left: -100%;
     width: 100%;
     height: 100%;
-    background: inherit;
-    transition: all 0.3s ease;
+    background: black;
+    transition: left 0.4s ease;
     z-index: -1;
   }
-  
+
   &:hover {
-    color: inherit;
-    
+    color: white;
+
     &::before {
       left: 0;
     }

@@ -1,34 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-// import Works from './pages/Works';
-// import Contact from './pages/Contact';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
-import { AnimatePresence } from 'framer-motion';
-import './i18n'; // Add this import
-import Work from './pages/Work';
-import Skills from './pages/Skills';
-import Contact from './pages/Contact';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './AppRoutes'; // New component
+import './i18n';
 
 function App() {
   return (
     <Router>
-      <div className="app">
-      <CustomCursor />
-      <Navbar />
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/work" element={<Work />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </div>
+      <AppRoutes />
     </Router>
   );
 }
