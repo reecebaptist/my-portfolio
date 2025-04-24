@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa6';
 
 const ContactContainer = styled(motion.div)`
 background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTIwIDBDOC45NTQgMCAwIDguOTU0IDAgMjBjMCAxMS4wNDcgOC45NTQgMjAgMjAgMjBzMjAtOC45NTMgMjAtMjBjMC0xMS4wNDYtOC45NTQtMjAtMjAtMjB6bTAgMTVjLTguMjg0IDAtMTUgNi43MTYtMTUgMTUgMCA4LjI4MyA2LjcxNiAxNSAxNSAxNXMxNS02LjcxNyAxNS0xNWMwLTguMjg0LTYuNzE2LTE1LTE1LTE1eiIvPjwvZz48L2c+PC9zdmc+');
@@ -45,6 +46,9 @@ const ContactLabel = styled.div`
   font-size: 0.9rem;
   color: black;
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const ContactValue = styled.a`
@@ -67,18 +71,21 @@ const Contact = () => {
   const contactItems = [
     {
       label: t('contact.email'),
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      value: 'reece.baptist@gmail.com',
+      href: 'mailto:reece.baptist@gmail.com',
+      icon: <FaEnvelope style={{marginRight: '0.5rem'}} />
     },
     {
       label: t('contact.phone'),
-      value: '+1 (123) 456-7890',
-      href: 'tel:+11234567890'
+      value: '+91 (999) 471-0295',
+      href: 'tel:+919994710295',
+      icon: <FaPhone style={{ marginRight: '0.5rem' }} />
     },
     {
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/yourprofile',
-      href: 'https://linkedin.com/in/yourprofile'
+      label: t('contact.linkedin'),
+      value: 'linkedin.com/in/reece-baptist',
+      href: 'https://www.linkedin.com/in/reece-baptist/',
+      icon: <FaLinkedin style={{ marginRight: '0.5rem' }} />
     }
   ];
 
@@ -104,7 +111,10 @@ const Contact = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
           >
-            <ContactLabel>{item.label}</ContactLabel>
+            <ContactLabel>
+              {item.icon}
+              {item.label}
+              </ContactLabel>
             <ContactValue 
               href={item.href} 
               target="_blank" 
