@@ -7,8 +7,11 @@
     "skills": "Skills"
   },
   "home": {
-    "title": "Welcome to My Portfolio",
-    "subtitle": "I create minimalist and thoughtful digital experiences inspired by Japanese aesthetics."
+    "title": "Hi, I'm Reece",
+    "subtitle": "I develop data engineering pipelines as well as set up back-end services.",
+    "view_works": "View Work History",
+    "contact": "Contact Me",
+    "scroll": "Scroll"
   },
   "about": {
     "title": "About Me",

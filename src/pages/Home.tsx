@@ -9,8 +9,9 @@ const HomeContainer = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
+  margin-bottom: -5rem;
 `;
 
 const Title = styled(motion.h1)`
@@ -71,31 +72,31 @@ const Home = () => {
       </Subtitle>
       <ButtonGroup>
       <JapaneseButton
-        onClick={() => window.location.href = '/works'}
-        labelKey="Download CV"
+        onClick={() => window.location.href = '/work'}
+        labelKey="home.view_works"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       />
       <JapaneseButton
-        onClick={() => window.location.href = '/works'}
-        labelKey="Contact Me"
+        onClick={() => window.location.href = '/contact'}
+        labelKey="home.contact"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       />
       </ButtonGroup>
-      <ScrollIndicator
+      {/* <ScrollIndicator
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
       >
-        <span>Scroll</span>
+        <span>{t('home.scroll')}</span>
         <Arrow
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         />
-      </ScrollIndicator>
+      </ScrollIndicator> */}
     </HomeContainer>
   );
 };
