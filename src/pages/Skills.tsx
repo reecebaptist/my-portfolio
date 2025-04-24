@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { FaReact } from 'react-icons/fa';
+import { FaJava } from 'react-icons/fa';
+import { SiPython, SiScala, SiTypescript, SiJavascript, SiApachespark, SiReact, SiGooglecloud, SiGooglebigquery, SiMysql, SiGit, SiJirasoftware, SiSpring } from 'react-icons/si';
 
 const SkillsContainer = styled(motion.div)`
   padding: 8rem 2rem 4rem;
@@ -89,7 +90,7 @@ const SkillDescription = styled.p`
 
 const ProgressContainer = styled.div`
   width: 100%;
-  background: 'black';
+  background: white;
   border-radius: 4px;
   overflow: hidden;
   height: 4px;
@@ -97,42 +98,112 @@ const ProgressContainer = styled.div`
 
 const ProgressBar = styled(motion.div)<{ level: number }>`
   height: 100%;
-  background: black;
+  background: rgba(0,0,0,0.7);
   width: ${props => props.level}%;
 `;
 
 const skillsData = [
   {
-    category: 'design',
+    category: 'development',
     skills: [
       {
-        name: 'UI/UX Design',
+        name: 'Python',
         level: 90,
-        description: 'Creating intuitive and aesthetically pleasing interfaces',
-        icon: <FaReact />
+        description: 'Efficient scripting and automation with strong data handling',
+        icon: <SiPython />
       },
       {
-        name: 'Typography',
+        name: 'Scala',
         level: 25,
-        description: 'Thoughtful type selection and hierarchy dwasd dasd    ',
-        icon: <FaReact />
+        description: 'Functional and object-oriented programming for Spark Framework',
+        icon: <SiScala />
+      },
+      {
+        name: 'Java',
+        level: 25,
+        description: 'Platform-independent Back-End application development',
+        icon: <FaJava />
+      },
+      {
+        name: 'TypeScript',
+        level: 25,
+        description: 'Type-safe JavaScript development',
+        icon: <SiTypescript />
+      },
+      {
+        name: 'JavaScript',
+        level: 25,
+        description: 'Dynamic and versatile web development',
+        icon: <SiJavascript />
+      },
+      {
+        name: 'SQL',
+        level: 25,
+        description: 'Structured Querying of data from Databases',
+        icon: <SiMysql />
+      },
+    ]
+  },
+  {
+    category: 'frameworks',
+    skills: [
+      {
+        name: 'PySpark',
+        level: 92,
+        description: 'Distributed data processing using Python on Apache Spark',
+        icon: <SiPython />
+      },
+      {
+        name: 'Apache Spark',
+        level: 88,
+        description: 'Scalable analytics and big data processing framework',
+        icon: <SiApachespark />
+      },
+      {
+        name: 'React',
+        level: 88,
+        description: 'Component-based UI development for dynamic web apps',
+        icon: <SiReact />
+      },
+      {
+        name: 'Spring Boot',
+        level: 88,
+        description: 'Java framework for building production-ready, RESTful backend services',
+        icon: <SiSpring />
       }
     ]
   },
   {
-    category: 'development',
+    category: 'cloud_tools',
     skills: [
       {
-        name: 'React',
+        name: 'Google Cloud Platform',
         level: 92,
-        description: 'Building component-based applications',
-        icon: <FaReact />
+        description: 'Cloud-based infrastructure for scalable compute and storage',
+        icon: <SiGooglecloud />
       },
       {
-        name: 'TypeScript',
+        name: 'BigQuery',
         level: 88,
-        description: 'Type-safe JavaScript development',
-        icon: <FaReact />
+        description: 'Serverless data warehouse for fast SQL analytics on large datasets',
+        icon: <SiGooglebigquery />
+      }
+    ]
+  },
+  {
+    category: 'tools',
+    skills: [
+      {
+        name: 'Git',
+        level: 92,
+        description: 'Version control system for tracking and collaborating on code changes',
+        icon: <SiGit />
+      },
+      {
+        name: 'JIRA',
+        level: 88,
+        description: 'Agile project management tool for tracking issues and sprint planning',
+        icon: <SiJirasoftware />
       }
     ]
   }

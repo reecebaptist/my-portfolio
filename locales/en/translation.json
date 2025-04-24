@@ -29,7 +29,10 @@
       "design": "Design",
       "development": "Development",
       "tools": "Tools",
-      "principles": "Principles"
+      "principles": "Principles",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "cloud_tools": "Cloud Tools"
     }
   },
   "contact": {
