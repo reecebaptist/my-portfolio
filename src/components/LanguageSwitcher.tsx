@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import LanguageTransition from './LanguageTransition';
 
 const LanguageButton = styled.button`
   background: none;
@@ -30,13 +32,26 @@ const LanguageButton = styled.button`
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
+  
+
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
+    if (i18n.language === lng) return;
+
+    setIsTransitioning(true);
+    setTimeout(() => {
+      i18n.changeLanguage(lng);
+    }, 500); // Change language mid-animation
+
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 1000); // Close overlay after full animation
   };
 
   return (
     <div>
+      <LanguageTransition isVisible={isTransitioning} />
       <LanguageButton 
         onClick={() => changeLanguage('en')}
         style={{ fontWeight: i18n.language === 'en' ? 'bold' : 'normal' }}
