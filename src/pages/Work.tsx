@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { ButtonGroup, CVButton } from '../components/JapaneseButton';
+import { ButtonGroup, JapaneseButton } from '../components/JapaneseButton';
 import { FaBriefcase } from 'react-icons/fa';
 import { FaGraduationCap } from "react-icons/fa6";
 
@@ -102,7 +102,7 @@ const workData = [
     date: "Sept 2024 - Present",
     title: "Software Engineer III",
     subtitle: "Walmart Global Tech, Bangalore",
-    content: "Lead designer creating minimalist interfaces for international clients with focus on Japanese aesthetics.",
+    content: "Lead Developer in ETL projects, preparing business reports and translating business requirements into technical solutions.",
     icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   },
   {
@@ -110,7 +110,7 @@ const workData = [
     date: "Jul 2022 - Aug 2024",
     title: "Software Engineer II",
     subtitle: "Walmart Global Tech, Bangalore",
-    content: "Designed user flows and interactions for traditional businesses transitioning to digital platforms.",
+    content: "Designed data modeling and architecture and collaborated for the development of ETL pipes as well as back end services.",
     icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   },
   {
@@ -118,7 +118,7 @@ const workData = [
     date: "Jun 2018 - May 2022",
     title: "Bachelor of Technology",
     subtitle: "Vellore Institute of Technology, Vellore",
-    content: "Learned fundamentals of wabi-sabi design principles and digital application of traditional crafts.",
+    content: "Graduated with honours with a CGPA of 9.29 (out of 10).",
     icon: <FaGraduationCap style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   }
 ];
@@ -157,36 +157,32 @@ const Work = () => {
         ))}
       </Timeline>
       <ButtonGroup>
-      <CVButton
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+      <JapaneseButton
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         onClick={() => window.open('/CV_EN.pdf')}
+        labelKey={t('work.view_cv')}
         >
-        {t('work.view_cv')}
-      </CVButton>
-      <CVButton
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+      </JapaneseButton>
+      <JapaneseButton
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         onClick={() => window.open('/Rirekisho.pdf')}
+        labelKey={t('work.view_rirekisho')}
         >
-        {t('work.view_rirekisho')}
-      </CVButton>
-      <CVButton
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        
+      </JapaneseButton>
+      <JapaneseButton
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}  
         onClick={() => window.open('/Shokumukeirekisho.pdf')}
+        labelKey={t('work.view_shoku')}
         >
-        {t('work.view_shoku')}
-      </CVButton>
+        
+      </JapaneseButton>
       </ButtonGroup>
     </WorkContainer>
   );

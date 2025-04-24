@@ -108,37 +108,37 @@ const skillsData = [
     skills: [
       {
         name: 'Python',
-        level: 90,
+        level: 70,
         description: 'Efficient scripting and automation with strong data handling',
         icon: <SiPython />
       },
       {
         name: 'Scala',
-        level: 25,
+        level: 90,
         description: 'Functional and object-oriented programming for Spark Framework',
         icon: <SiScala />
       },
       {
         name: 'Java',
-        level: 25,
+        level: 80,
         description: 'Platform-independent Back-End application development',
         icon: <FaJava />
       },
       {
         name: 'TypeScript',
-        level: 25,
+        level: 60,
         description: 'Type-safe JavaScript development',
         icon: <SiTypescript />
       },
       {
         name: 'JavaScript',
-        level: 25,
+        level: 60,
         description: 'Dynamic and versatile web development',
         icon: <SiJavascript />
       },
       {
         name: 'SQL',
-        level: 25,
+        level: 80,
         description: 'Structured Querying of data from Databases',
         icon: <SiMysql />
       },
@@ -149,25 +149,25 @@ const skillsData = [
     skills: [
       {
         name: 'PySpark',
-        level: 92,
+        level: 60,
         description: 'Distributed data processing using Python on Apache Spark',
         icon: <SiPython />
       },
       {
         name: 'Apache Spark',
-        level: 88,
+        level: 90,
         description: 'Scalable analytics and big data processing framework',
         icon: <SiApachespark />
       },
       {
         name: 'React',
-        level: 88,
+        level: 60,
         description: 'Component-based UI development for dynamic web apps',
         icon: <SiReact />
       },
       {
         name: 'Spring Boot',
-        level: 88,
+        level: 50,
         description: 'Java framework for building production-ready, RESTful backend services',
         icon: <SiSpring />
       }
@@ -178,13 +178,13 @@ const skillsData = [
     skills: [
       {
         name: 'Google Cloud Platform',
-        level: 92,
+        level: 90,
         description: 'Cloud-based infrastructure for scalable compute and storage',
         icon: <SiGooglecloud />
       },
       {
         name: 'BigQuery',
-        level: 88,
+        level: 90,
         description: 'Serverless data warehouse for fast SQL analytics on large datasets',
         icon: <SiGooglebigquery />
       }
@@ -195,13 +195,13 @@ const skillsData = [
     skills: [
       {
         name: 'Git',
-        level: 92,
+        level: 90,
         description: 'Version control system for tracking and collaborating on code changes',
         icon: <SiGit />
       },
       {
         name: 'JIRA',
-        level: 88,
+        level: 80,
         description: 'Agile project management tool for tracking issues and sprint planning',
         icon: <SiJirasoftware />
       }
