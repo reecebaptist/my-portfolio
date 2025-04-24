@@ -40,14 +40,14 @@ const About = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        I'm a designer and developer with a passion for creating digital experiences that embody simplicity and elegance. My work is heavily influenced by Japanese design principles - focusing on minimalism, attention to detail, and the beauty of empty space.
+        I'm a software engineer with a deep focus on crafting resilient, scalable systems that power meaningful data-driven experiences. My work bridges the worlds of data engineering and backend development — designing robust pipelines, optimizing data flow, and building performant APIs that serve complex business needs.
       </Paragraph>
       <Paragraph
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        With over 5 years of experience in the industry, I've had the privilege of working with clients from various sectors, helping them translate their vision into digital products that resonate with their audience.
+        With over 3 years of experience, I've collaborated across industries to turn raw data into actionable insight and backend architecture into seamless, user-facing functionality. My approach blends precision engineering with thoughtful design, always aiming for clarity, efficiency, and long-term maintainability.
       </Paragraph>
     </AboutContainer>
   );
