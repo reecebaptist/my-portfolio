@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './AppRoutes'; // New component
+import AppRoutes from './routes/AppRoutes'; // New component
 import './i18n';
 
 function App() {

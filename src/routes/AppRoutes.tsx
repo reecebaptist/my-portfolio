@@ -2,16 +2,16 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Work from './pages/Work';
-import Skills from './pages/Skills';
-import Contact from './pages/Contact';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Work from '../pages/Work';
+import Skills from '../pages/Skills';
+import Contact from '../pages/Contact';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
-import PageTransition from './components/PageTransition';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CustomCursor from '../components/CustomCursor';
+import PageTransition from '../components/PageTransition';
 
 const AppRoutes = () => {
   const location = useLocation();
