@@ -11,7 +11,6 @@ const HomeContainer = styled(motion.div)`
   align-items: center;
   padding: 1rem;
   text-align: center;
-  margin-bottom: -5rem;
 `;
 
 const Title = styled(motion.h1)`
@@ -86,7 +85,7 @@ const Home = () => {
         transition={{ delay: 0.8, duration: 0.6 }}
       />
       </ButtonGroup>
-      {/* <ScrollIndicator
+      <ScrollIndicator
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
@@ -96,7 +95,7 @@ const Home = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
         />
-      </ScrollIndicator> */}
+      </ScrollIndicator>
     </HomeContainer>
   );
 };
