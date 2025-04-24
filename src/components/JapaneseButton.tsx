@@ -53,9 +53,12 @@ export const CVButton = styled(MinimalButton)`
 interface JapaneseButtonProps {
   onClick?: () => void;
   labelKey?: string;
+  initial?: any;
+  animate?: any;
+  transition?: any;
 }
 
-export const JapaneseButton = ({ onClick, labelKey = 'view_works' }: JapaneseButtonProps) => {
+export const JapaneseButton = ({ onClick, labelKey = 'view_works', initial,animate,transition }: JapaneseButtonProps) => {
   const { t } = useTranslation();
   
   return (
@@ -63,6 +66,9 @@ export const JapaneseButton = ({ onClick, labelKey = 'view_works' }: JapaneseBut
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
+      initial={initial}
+      animate={animate}
+      transition={transition}
     >
       {t(labelKey)} <FaArrowRight style={{ marginLeft: '0.5rem' }} />
     </MinimalButton>

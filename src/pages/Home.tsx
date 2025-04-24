@@ -73,10 +73,16 @@ const Home = () => {
       <JapaneseButton
         onClick={() => window.location.href = '/works'}
         labelKey="Download CV"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
       />
       <JapaneseButton
         onClick={() => window.location.href = '/works'}
         labelKey="Contact Me"
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.6 }}
       />
       </ButtonGroup>
       <ScrollIndicator
