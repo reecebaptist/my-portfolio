@@ -16,5 +16,14 @@
   "experience": {
     "title": "職務経歴",
     "view_cv": "履歴書を見る"
+  },
+  "skills": {
+    "title": "スキルと専門知識",
+    "categories": {
+      "design": "デザイン",
+      "development": "開発",
+      "tools": "ツール",
+      "principles": "原則"
+    }
   }
 }

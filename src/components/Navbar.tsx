@@ -94,7 +94,6 @@ const MenuItem = styled(NavLink)`
 
 const MobileMenuItem = styled(NavLink)`
   font-family: 'Helvetica', sans-serif;
-;
   font-size: 1.5rem;
   text-decoration: none;
   color: 'black';
@@ -227,6 +226,9 @@ const Navbar = () => {
           <MenuItem to="/work">
             <Trans i18nKey="navbar.work">Work</Trans>
           </MenuItem>
+          <MenuItem to="/skills">
+            <Trans i18nKey="navbar.skills">Skills</Trans>
+          </MenuItem>
           <MenuItem to="/contact">
             <Trans i18nKey="navbar.contact">Contact</Trans>
           </MenuItem>
@@ -253,8 +255,8 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
             >
               <MobileMenuItem to="/about" onClick={closeMenu}>About</MobileMenuItem>
-              <MobileMenuItem to="/works" onClick={closeMenu}>Works</MobileMenuItem>
-              <MobileMenuItem to="/experience" onClick={closeMenu}>Experience</MobileMenuItem>
+              <MobileMenuItem to="/work" onClick={closeMenu}>Work</MobileMenuItem>
+              <MobileMenuItem to="/skills" onClick={closeMenu}>Skills</MobileMenuItem>
               <MobileMenuItem to="/contact" onClick={closeMenu}>Contact</MobileMenuItem>
               <LanguageSwitcher />
             </MobileMenu>

@@ -3,7 +3,8 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "work": "Work"
+    "work": "Work",
+    "skills": "Skills"
   },
   "home": {
     "title": "Welcome to My Portfolio",
@@ -16,5 +17,14 @@
   "work": {
     "title": "Professional Journey",
     "view_cv": "View Full CV"
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "categories": {
+      "design": "Design",
+      "development": "Development",
+      "tools": "Tools",
+      "principles": "Principles"
+    }
   }
 }

@@ -9,6 +9,7 @@ import CustomCursor from './components/CustomCursor';
 import { AnimatePresence } from 'framer-motion';
 import './i18n'; // Add this import
 import Work from './pages/Work';
+import Skills from './pages/Skills';
 
 function App() {
   return (
@@ -20,9 +21,8 @@ function App() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/works" element={<Works />} />
-            <Route path="/contact" element={<Contact />} /> */}
             <Route path="/work" element={<Work />} />
+            <Route path="/skills" element={<Skills />} />
           </Routes>
         </AnimatePresence>
         <Footer />
