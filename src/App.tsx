@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import { AnimatePresence } from 'framer-motion';
 import './i18n'; // Add this import
+import Work from './pages/Work';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/about" element={<About />} />
             {/* <Route path="/works" element={<Works />} />
             <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/work" element={<Work />} />
           </Routes>
         </AnimatePresence>
         <Footer />

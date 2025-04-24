@@ -5,7 +5,7 @@ const LanguageButton = styled.button`
   background: none;
   border: none;
   color: inherit;
-  font-family: 'Times New Roman', serif;
+  font-family:'Helvetica', sans-serif;
   font-size: 0.8rem;
   cursor: pointer;
   padding: 0.5rem;

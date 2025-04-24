@@ -2,8 +2,8 @@
   "navbar": {
     "home": "Home",
     "about": "About",
-    "works": "Works",
-    "contact": "Contact"
+    "contact": "Contact",
+    "work": "Work"
   },
   "home": {
     "title": "Welcome to My Portfolio",
@@ -12,5 +12,9 @@
   "about": {
     "title": "About Me",
     "content": "I'm a designer and developer with a passion for creating digital experiences that embody simplicity and elegance..."
+  },
+  "work": {
+    "title": "Professional Journey",
+    "view_cv": "View Full CV"
   }
 }

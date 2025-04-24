@@ -43,6 +43,13 @@ const MinimalButton = styled(motion.button)`
   }
 `;
 
+export const CVButton = styled(MinimalButton)`
+  margin-top: 3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 interface JapaneseButtonProps {
   onClick?: () => void;
   labelKey?: string;

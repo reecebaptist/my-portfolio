@@ -70,8 +70,8 @@ const Navbar = () => {
         <MenuItem to="/about">
           <Trans i18nKey="navbar.about">About</Trans>
         </MenuItem>
-        <MenuItem to="/works">
-          <Trans i18nKey="navbar.works">Works</Trans>
+        <MenuItem to="/work">
+          <Trans i18nKey="navbar.works">Work</Trans>
         </MenuItem>
         <MenuItem to="/contact">
           <Trans i18nKey="navbar.contact">Contact</Trans>
