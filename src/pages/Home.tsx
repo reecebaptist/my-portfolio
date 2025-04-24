@@ -53,39 +53,39 @@ const Arrow = styled(motion.div)`
 
 
 
-const ImageSection = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-`;
+// const ImageSection = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100vh;
+//   overflow: hidden;
+// `;
 
-const ImageContainer = styled.div`
-  flex: 1;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// const ImageContainer = styled.div`
+//   flex: 1;
+//   position: relative;
+//   background-size: cover;
+//   background-position: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-`;
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.4);
+//   }
+// `;
 
-const OverlayText = styled.h2`
-  font-family: 'Times New Roman', serif;
-  font-size: 3rem;
-  color: white;
-  z-index: 2;
-`;
+// const OverlayText = styled.h2`
+//   font-family: 'Times New Roman', serif;
+//   font-size: 3rem;
+//   color: white;
+//   z-index: 2;
+// `;
 
 const ProjectsSection = styled(motion.div)`
   padding: 8rem 2rem 4rem;
