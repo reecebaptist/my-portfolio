@@ -19,7 +19,9 @@
   },
   "work": {
     "title": "Professional Journey",
-    "view_cv": "View Full CV"
+    "view_cv": "View English CV",
+    "view_rirekisho": "View Japanese CV",
+    "view_shoku": "View Work History"
   },
   "skills": {
     "title": "Skills & Expertise",

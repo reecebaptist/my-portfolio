@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
-import { CVButton } from '../components/JapaneseButton';
+import { ButtonGroup, CVButton } from '../components/JapaneseButton';
 import { FaBriefcase } from 'react-icons/fa';
+import { FaGraduationCap } from "react-icons/fa6";
+
 
 const WorkContainer = styled(motion.div)`
   padding: 8rem 2rem 4rem;
@@ -97,24 +99,27 @@ const TimelineContent = styled.p`
 const workData = [
   {
     id: 1,
-    date: "2021 - Present",
-    title: "Senior UI Designer",
-    subtitle: "Zen Design Studio, Kyoto",
-    content: "Lead designer creating minimalist interfaces for international clients with focus on Japanese aesthetics."
+    date: "Sept 2024 - Present",
+    title: "Software Engineer III",
+    subtitle: "Walmart Global Tech, Bangalore",
+    content: "Lead designer creating minimalist interfaces for international clients with focus on Japanese aesthetics.",
+    icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   },
   {
     id: 2,
-    date: "2018 - 2021",
-    title: "UX Designer",
-    subtitle: "Tokyo Digital Agency",
-    content: "Designed user flows and interactions for traditional businesses transitioning to digital platforms."
+    date: "Jul 2022 - Aug 2024",
+    title: "Software Engineer II",
+    subtitle: "Walmart Global Tech, Bangalore",
+    content: "Designed user flows and interactions for traditional businesses transitioning to digital platforms.",
+    icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   },
   {
     id: 3,
-    date: "2016 - 2018",
-    title: "Design Intern",
-    subtitle: "Osaka Creative Lab",
-    content: "Learned fundamentals of wabi-sabi design principles and digital application of traditional crafts."
+    date: "Jun 2018 - May 2022",
+    title: "Bachelor of Technology",
+    subtitle: "Vellore Institute of Technology, Vellore",
+    content: "Learned fundamentals of wabi-sabi design principles and digital application of traditional crafts.",
+    icon: <FaGraduationCap style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
   }
 ];
 
@@ -143,7 +148,7 @@ const Work = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3 + index * 0.1, duration: 0.8 }}
           >
-            <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
+            {item.icon}
             <TimelineDate>{item.date}</TimelineDate>
             <TimelineTitle>{item.title}</TimelineTitle>
             <TimelineSubtitle>{item.subtitle}</TimelineSubtitle>
@@ -151,13 +156,38 @@ const Work = () => {
           </TimelineItem>
         ))}
       </Timeline>
+      <ButtonGroup>
       <CVButton
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        onClick={() => window.open('/path-to-cv.pdf')}
+        initial={{ x: -20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        onClick={() => window.open('/CV_EN.pdf')}
         >
-  {t('work.view_cv')}
-</CVButton>
+        {t('work.view_cv')}
+      </CVButton>
+      <CVButton
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        initial={{ x: -20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        onClick={() => window.open('/Rirekisho.pdf')}
+        >
+        {t('work.view_rirekisho')}
+      </CVButton>
+      <CVButton
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        initial={{ x: -20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}  
+        onClick={() => window.open('/Shokumukeirekisho.pdf')}
+        >
+        {t('work.view_shoku')}
+      </CVButton>
+      </ButtonGroup>
     </WorkContainer>
   );
 };
