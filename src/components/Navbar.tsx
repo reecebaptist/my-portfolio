@@ -187,10 +187,23 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  const handleNavClick = () => {
+    // Close mobile menu if open
+    setIsMenuOpen(false);
+    
+    // Smooth scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
+  
+
   return (
     <>
       <NavContainer $overlay={!isMenuOpen} $shadow={!isMobile && isScrolled}>
-        <Logo to="/" onClick={closeMenu}>Portfolio</Logo>
+        <Logo to="/" onClick={handleNavClick}>Portfolio</Logo>
         
         {isMobile && (
           <BurgerButton 
@@ -233,16 +246,16 @@ const Navbar = () => {
 
 {!isMobile && (
           <MenuItems>
-          <MenuItem to="/about">
+          <MenuItem to="/about" onClick={handleNavClick} >
             <Trans i18nKey="navbar.about">About</Trans>
           </MenuItem>
-          <MenuItem to="/work">
+          <MenuItem to="/work" onClick={handleNavClick} >
             <Trans i18nKey="navbar.work">Work</Trans>
           </MenuItem>
-          <MenuItem to="/skills">
+          <MenuItem to="/skills" onClick={handleNavClick} >
             <Trans i18nKey="navbar.skills">Skills</Trans>
           </MenuItem>
-          <MenuItem to="/contact">
+          <MenuItem to="/contact" onClick={handleNavClick} >
             <Trans i18nKey="navbar.contact">Contact</Trans>
           </MenuItem>
           <LanguageSwitcher />
@@ -267,10 +280,10 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <MobileMenuItem to="/about" onClick={closeMenu}>About</MobileMenuItem>
-              <MobileMenuItem to="/work" onClick={closeMenu}>Work</MobileMenuItem>
-              <MobileMenuItem to="/skills" onClick={closeMenu}>Skills</MobileMenuItem>
-              <MobileMenuItem to="/contact" onClick={closeMenu}>Contact</MobileMenuItem>
+              <MobileMenuItem to="/about" onClick={handleNavClick} >About</MobileMenuItem>
+              <MobileMenuItem to="/work" onClick={handleNavClick} >Work</MobileMenuItem>
+              <MobileMenuItem to="/skills" onClick={handleNavClick} >Skills</MobileMenuItem>
+              <MobileMenuItem to="/contact" onClick={handleNavClick} >Contact</MobileMenuItem>
               <LanguageSwitcher />
             </MobileMenu>
           </>

@@ -10,7 +10,7 @@ const SkillsContainer = styled(motion.div)`
   margin: 0 auto;
 `;
 
-const SectionTitle = styled(motion.h2)`
+export const SectionTitle = styled(motion.h2)`
   font-family: 'Times New Roman', serif;
   font-size: 2rem;
   font-weight: normal;
@@ -42,13 +42,13 @@ const CategoryTitle = styled.h3`
   border-bottom: 1px solid 'gray';
 `;
 
-const SkillsGrid = styled.div`
+export const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 `;
 
-const SkillCard = styled(motion.div)`
+export const SkillCard = styled(motion.div)`
   padding: 1.5rem;
   border: 1px solid 'gray';
   background: 'white';
@@ -62,7 +62,7 @@ const SkillCard = styled(motion.div)`
   }
 `;
 
-const SkillHeader = styled.div`
+export const SkillHeader = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
@@ -74,13 +74,13 @@ const SkillIcon = styled.div`
   color: 'black';
 `;
 
-const SkillName = styled.h4`
+export const SkillName = styled.h4`
   font-family: 'Times New Roman', serif;
   font-size: 1.2rem;
   color: 'black';
 `;
 
-const SkillDescription = styled.p`
+export const SkillDescription = styled.p`
   font-family: 'Helvetica', sans-serif;
   font-size: 0.9rem;
   color:'black';

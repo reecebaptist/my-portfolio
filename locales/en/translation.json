@@ -8,7 +8,7 @@
   },
   "home": {
     "title": "Hi, I'm Reece",
-    "subtitle": "I develop data engineering pipelines as well as set up back-end services.",
+    "subtitle": "I develop data engineering pipelines and set up back-end services.",
     "view_works": "View Work History",
     "contact": "Contact Me",
     "scroll": "Scroll"
@@ -40,5 +40,8 @@
     "email": "Email",
     "phone": "Phone",
     "linkedin": "LinkedIn"
+  },
+  "projects":{ 
+    "title": "Projects"
   }
 }

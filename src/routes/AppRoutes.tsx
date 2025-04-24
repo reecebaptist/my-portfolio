@@ -12,6 +12,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CustomCursor from '../components/CustomCursor';
 import PageTransition from '../components/PageTransition';
+import ScrollToTop from '../components/ScrollToTop';
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -39,6 +40,7 @@ const AppRoutes = () => {
   return (
     <div className="app">
       <CustomCursor />
+      <ScrollToTop />
       <PageTransition isVisible={isTransitioning} />
       <Navbar />
       <AnimatePresence mode="wait">
