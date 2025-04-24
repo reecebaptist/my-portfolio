@@ -25,5 +25,10 @@
       "tools": "ツール",
       "principles": "原則"
     }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "email": "メール",
+    "phone": "電話"
   }
 }

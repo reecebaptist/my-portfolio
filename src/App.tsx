@@ -10,6 +10,7 @@ import { AnimatePresence } from 'framer-motion';
 import './i18n'; // Add this import
 import Work from './pages/Work';
 import Skills from './pages/Skills';
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>
         <Footer />

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Trans } from 'react-i18next';
 
-const NavContainer = styled.nav`
+const NavContainer = styled.nav<{ $overlay: boolean; $shadow: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,8 +15,11 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  color: white;
-  mix-blend-mode: difference;
+  color: black;
+  mix-blend-mode: normal;
+  background-color: ${({ $overlay }) => ($overlay ? 'rgba(255, 255, 255, 0.9)' : 'transparent')};
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: ${({ $shadow }) => ($shadow ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none')};
 `;
 
 const Logo = styled(NavLink)`
@@ -28,7 +31,7 @@ const Logo = styled(NavLink)`
   z-index: 110;
 `;
 
-const Overlay = styled(motion.div)`
+const MobileOverlay = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -138,7 +141,17 @@ const BurgerLine = styled(motion.span)`
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+  
+    handleScroll(); // run initially in case already scrolled
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   // Check if mobile on mount and resize
   useEffect(() => {
     const handleResize = () => {
@@ -176,7 +189,7 @@ const Navbar = () => {
 
   return (
     <>
-      <NavContainer>
+      <NavContainer $overlay={!isMenuOpen} $shadow={!isMobile && isScrolled}>
         <Logo to="/" onClick={closeMenu}>Portfolio</Logo>
         
         {isMobile && (
@@ -241,7 +254,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            <Overlay
+            <MobileOverlay
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

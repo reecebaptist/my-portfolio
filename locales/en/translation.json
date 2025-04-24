@@ -26,5 +26,10 @@
       "tools": "Tools",
       "principles": "Principles"
     }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "email": "Email",
+    "phone": "Phone"
   }
 }
