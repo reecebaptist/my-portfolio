@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const AboutContainer = styled(motion.div)`
