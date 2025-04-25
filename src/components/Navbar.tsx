@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
-import { Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const NavContainer = styled.nav<{ $overlay: boolean; $shadow: boolean }>`
   position: fixed;
@@ -139,6 +139,9 @@ const BurgerLine = styled(motion.span)`
 `;
 
 const Navbar = () => {
+
+  const {t} = useTranslation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -203,7 +206,7 @@ const Navbar = () => {
   return (
     <>
       <NavContainer $overlay={!isMenuOpen} $shadow={!isMobile && isScrolled}>
-        <Logo to="/" onClick={handleNavClick}>Portfolio</Logo>
+        <Logo to="/" onClick={handleNavClick}>{t('navbar.portfolio')}</Logo>
         
         {isMobile && (
           <BurgerButton 
@@ -247,16 +250,16 @@ const Navbar = () => {
 {!isMobile && (
           <MenuItems>
           <MenuItem to="/about" onClick={handleNavClick} >
-            <Trans i18nKey="navbar.about">About</Trans>
+            {t('navbar.about')}
           </MenuItem>
           <MenuItem to="/work" onClick={handleNavClick} >
-            <Trans i18nKey="navbar.work">Work</Trans>
+          {t('navbar.work')}
           </MenuItem>
           <MenuItem to="/skills" onClick={handleNavClick} >
-            <Trans i18nKey="navbar.skills">Skills</Trans>
+          {t('navbar.skills')}
           </MenuItem>
           <MenuItem to="/contact" onClick={handleNavClick} >
-            <Trans i18nKey="navbar.contact">Contact</Trans>
+          {t('navbar.contact')}
           </MenuItem>
           <LanguageSwitcher />
         </MenuItems>
@@ -280,10 +283,10 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <MobileMenuItem to="/about" onClick={handleNavClick} >About</MobileMenuItem>
-              <MobileMenuItem to="/work" onClick={handleNavClick} >Work</MobileMenuItem>
-              <MobileMenuItem to="/skills" onClick={handleNavClick} >Skills</MobileMenuItem>
-              <MobileMenuItem to="/contact" onClick={handleNavClick} >Contact</MobileMenuItem>
+              <MobileMenuItem to="/about" onClick={handleNavClick} >{t('navbar.about')}</MobileMenuItem>
+              <MobileMenuItem to="/work" onClick={handleNavClick} > {t('navbar.work')}</MobileMenuItem>
+              <MobileMenuItem to="/skills" onClick={handleNavClick} >{t('navbar.skills')}</MobileMenuItem>
+              <MobileMenuItem to="/contact" onClick={handleNavClick} >{t('navbar.contact')}</MobileMenuItem>
               <LanguageSwitcher />
             </MobileMenu>
           </>

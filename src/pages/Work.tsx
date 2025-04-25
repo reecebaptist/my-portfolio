@@ -96,35 +96,37 @@ const TimelineContent = styled.p`
   color: '#252525';
 `;
 
-const workData = [
-  {
-    id: 1,
-    date: "Sept 2024 - Present",
-    title: "Software Engineer III",
-    subtitle: "Walmart Global Tech, Bangalore",
-    content: "Lead Developer in ETL projects, preparing business reports and translating business requirements into technical solutions.",
-    icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
-  },
-  {
-    id: 2,
-    date: "Jul 2022 - Aug 2024",
-    title: "Software Engineer II",
-    subtitle: "Walmart Global Tech, Bangalore",
-    content: "Designed data modeling and architecture and collaborated for the development of ETL pipes as well as back end services.",
-    icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
-  },
-  {
-    id: 3,
-    date: "Jun 2018 - May 2022",
-    title: "Bachelor of Technology",
-    subtitle: "Vellore Institute of Technology, Vellore",
-    content: "Graduated with honours with a CGPA of 9.29 (out of 10).",
-    icon: <FaGraduationCap style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
-  }
-];
 
 const Work = () => {
   const { t } = useTranslation();
+
+    
+  const workData = [
+    {
+      id: 1,
+      date: t('work.workdata.0.date'),
+      title: t('work.workdata.0.title'),
+      subtitle: t('work.workdata.0.subtitle'),
+      content: t('work.workdata.0.content'),
+      icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
+    },
+    {
+      id: 2,
+      date: t('work.workdata.1.date'),
+      title: t('work.workdata.1.title'),
+      subtitle: t('work.workdata.1.subtitle'),
+      content: t('work.workdata.1.content'),
+      icon: <FaBriefcase style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
+    },
+    {
+      id: 3,
+      date: t('work.workdata.2.date'),
+      title: t('work.workdata.2.title'),
+      subtitle: t('work.workdata.2.subtitle'),
+      content: t('work.workdata.2.content'),
+      icon: <FaGraduationCap style={{ position: 'absolute', left: '-2.2rem', top: '0' }} />
+    }
+  ];
 
   return (
     <WorkContainer

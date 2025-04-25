@@ -4,7 +4,8 @@
     "about": "About",
     "contact": "Contact",
     "work": "Work",
-    "skills": "Skills"
+    "skills": "Skills",
+    "portfolio": "Portfolio"
   },
   "home": {
     "title": "Hi, I'm Reece",
@@ -15,13 +16,36 @@
   },
   "about": {
     "title": "About Me",
-    "content": "I'm a designer and developer with a passion for creating digital experiences that embody simplicity and elegance..."
+    "content": {
+      "1": "I'm a software engineer with a deep focus on crafting resilient, scalable systems that power meaningful data-driven experiences. My work bridges the worlds of data engineering and backend development — designing robust pipelines, optimizing data flow, and building performant APIs that serve complex business needs.",
+      "2": "With over 3 years of experience, I've collaborated across industries to turn raw data into actionable insight and backend architecture into seamless, user-facing functionality. My approach blends precision engineering with thoughtful design, always aiming for clarity, efficiency, and long-term maintainability."
+    }
   },
   "work": {
     "title": "Professional & Educational Journey",
     "view_cv": "View English CV",
     "view_rirekisho": "View Japanese CV",
-    "view_shoku": "View Work History"
+    "view_shoku": "View Work History",
+    "workdata": [
+      {
+        "date": "Sept 2024 - Present",
+        "title": "Software Engineer III",
+        "subtitle": "Walmart Global Tech, Bangalore",
+        "content": "Lead Developer in ETL projects, preparing business reports and translating business requirements into technical solutions."
+      },
+      {
+        "date": "Jul 2022 - Aug 2024",
+        "title": "Software Engineer II",
+        "subtitle": "Walmart Global Tech, Bangalore",
+        "content": "Designed data modeling and architecture and collaborated for the development of ETL pipes as well as back end services."
+      },
+      {
+        "date": "Jun 2018 - May 2022",
+        "title": "Bachelor of Technology",
+        "subtitle": "Vellore Institute of Technology, Vellore",
+        "content": "Graduated with honours with a CGPA of 9.29 (out of 10)."
+      }
+    ]
   },
   "skills": {
     "title": "Skills & Expertise",
@@ -33,6 +57,58 @@
       "languages": "Languages",
       "frameworks": "Frameworks",
       "cloud_tools": "Cloud Tools"
+    },
+    "skills": {
+      "development": [
+        {
+          "description": "Efficient scripting and automation with strong data handling"
+        },
+        {
+          "description": "Functional and object-oriented programming for Spark Framework"
+        },
+        {
+          "description": "Platform-independent Back-End application development"
+        },
+        {
+          "description": "Type-safe JavaScript development"
+        },
+        {
+          "description": "Dynamic and versatile web development"
+        },
+        {
+          "description": "Structured Querying of data from Databases"
+        }
+      ],
+      "frameworks": [
+        {
+          "description": "Distributed data processing using Python on Apache Spark"
+        },
+        {
+          "description": "Scalable analytics and big data processing framework"
+        },
+        {
+          "description": "Component-based UI development for dynamic web apps"
+        },
+        {
+          "description": "Java framework for building production-ready, RESTful backend services"
+        }
+      ],
+      "cloud_tools": [
+        {
+          "description": "Cloud-based infrastructure for scalable compute and storage"
+        },
+        {
+          "description": "Serverless data warehouse for fast SQL analytics on large datasets"
+        }
+      ],
+      "tools": [
+        {
+          "description": "Version control system for tracking and collaborating on code changes"
+        },
+        {
+          "description": "Agile project management tool for tracking issues and sprint planning"
+        }
+      ]
     }
   },
   "contact": {
@@ -41,7 +117,18 @@
     "phone": "Phone",
     "linkedin": "LinkedIn"
   },
-  "projects":{ 
-    "title": "Projects"
+  "projects": {
+    "title": "Projects",
+    "projects": [
+      {
+        "description": "Migrated and set up cloud jobs, saving around 90% business expenses"
+      },
+      {
+        "description": "Warehouse Application to handle appointments and assets"
+      },
+      {
+        "description": "SAP automation testing suite developed for FIORI Apps"
+      }
+    ]
   }
 }

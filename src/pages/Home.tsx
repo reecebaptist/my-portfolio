@@ -7,7 +7,6 @@ import warehouseImage from '../assets/images/warehouseImage.webp';
 import sapImage from '../assets/images/sapImage.webp';
 import { SectionTitle, SkillDescription, SkillHeader, SkillName, SkillsGrid } from './Skills';
 
-
 const HomeContainer = styled(motion.div)`
   height: 100vh;
   display: flex;
@@ -149,33 +148,34 @@ const SkillTag = styled.span`
   white-space: nowrap; // Prevent tags from breaking line internally
 `;
 
-const projects = [
-  {
-    title: 'Mainframe to Cloud (MF2C)',
-    description: 'Migrated and set up cloud jobs, saving around 90% business expenses',
-    image: mf2cImage,
-    alt: 'Mainframe to cloud migration diagram',
-    skills: ['Apache Spark', 'Scala', 'Python', 'PySpark']
-  },
-  {
-    title: 'Warehouse Application',
-    description: 'Warehouse Application to handle appointments and assets',
-    image: warehouseImage,
-    alt: 'Warehouse management system interface',
-    skills: ['React Native', 'TypeScript'] 
-  },
-  {
-    title: 'SAP ERP Testing Suite',
-    description: 'SAP automation testing suite developed for FIORI Apps',
-    image: sapImage,
-    alt: 'SAP testing suite dashboard',
-    skills: ['Playwright', 'TypeScript'] 
-  }
-];
 
 
 const Home = () => {
   const { t } = useTranslation();
+
+  const projectsData = [
+    {
+      title: 'Mainframe to Cloud (MF2C)',
+      description: t('projects.projects.0.description'),
+      image: mf2cImage,
+      alt: 'Mainframe to cloud migration diagram',
+      skills: ['Apache Spark', 'Scala', 'Python', 'PySpark']
+    },
+    {
+      title: 'Warehouse Application',
+      description: t('projects.projects.1.description'),
+      image: warehouseImage,
+      alt: 'Warehouse management system interface',
+      skills: ['React Native', 'TypeScript'] 
+    },
+    {
+      title: 'SAP ERP Testing Suite',
+      description: 'SAP automation testing suite developed for FIORI Apps',
+      image: sapImage,
+      alt: 'SAP testing suite dashboard',
+      skills: ['Playwright', 'TypeScript'] 
+    }
+  ];
 
   return (
     <>
@@ -250,7 +250,7 @@ const Home = () => {
           {t('projects.title')}
         </SectionTitle>
         <SkillsGrid>
-          {projects.map((project, i) => (
+          {projectsData.map((project, i) => (
             <ProjectCard
               key={i}
               initial={{ y: 20, opacity: 0 }}

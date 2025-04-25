@@ -102,115 +102,117 @@ const ProgressBar = styled(motion.div)<{ level: number }>`
   width: ${props => props.level}%;
 `;
 
-const skillsData = [
-  {
-    category: 'development',
-    skills: [
-      {
-        name: 'Python',
-        level: 70,
-        description: 'Efficient scripting and automation with strong data handling',
-        icon: <SiPython />
-      },
-      {
-        name: 'Scala',
-        level: 90,
-        description: 'Functional and object-oriented programming for Spark Framework',
-        icon: <SiScala />
-      },
-      {
-        name: 'Java',
-        level: 80,
-        description: 'Platform-independent Back-End application development',
-        icon: <FaJava />
-      },
-      {
-        name: 'TypeScript',
-        level: 60,
-        description: 'Type-safe JavaScript development',
-        icon: <SiTypescript />
-      },
-      {
-        name: 'JavaScript',
-        level: 60,
-        description: 'Dynamic and versatile web development',
-        icon: <SiJavascript />
-      },
-      {
-        name: 'SQL',
-        level: 80,
-        description: 'Structured Querying of data from Databases',
-        icon: <SiMysql />
-      },
-    ]
-  },
-  {
-    category: 'frameworks',
-    skills: [
-      {
-        name: 'PySpark',
-        level: 60,
-        description: 'Distributed data processing using Python on Apache Spark',
-        icon: <SiPython />
-      },
-      {
-        name: 'Apache Spark',
-        level: 90,
-        description: 'Scalable analytics and big data processing framework',
-        icon: <SiApachespark />
-      },
-      {
-        name: 'React',
-        level: 60,
-        description: 'Component-based UI development for dynamic web apps',
-        icon: <SiReact />
-      },
-      {
-        name: 'Spring Boot',
-        level: 50,
-        description: 'Java framework for building production-ready, RESTful backend services',
-        icon: <SiSpring />
-      }
-    ]
-  },
-  {
-    category: 'cloud_tools',
-    skills: [
-      {
-        name: 'Google Cloud Platform',
-        level: 90,
-        description: 'Cloud-based infrastructure for scalable compute and storage',
-        icon: <SiGooglecloud />
-      },
-      {
-        name: 'BigQuery',
-        level: 90,
-        description: 'Serverless data warehouse for fast SQL analytics on large datasets',
-        icon: <SiGooglebigquery />
-      }
-    ]
-  },
-  {
-    category: 'tools',
-    skills: [
-      {
-        name: 'Git',
-        level: 90,
-        description: 'Version control system for tracking and collaborating on code changes',
-        icon: <SiGit />
-      },
-      {
-        name: 'JIRA',
-        level: 80,
-        description: 'Agile project management tool for tracking issues and sprint planning',
-        icon: <SiJirasoftware />
-      }
-    ]
-  }
-];
 
 const Skills = () => {
   const { t } = useTranslation();
+
+    
+  const skillsData = [
+    {
+      category: 'development',
+      skills: [
+        {
+          name: 'Python',
+          level: 70,
+          description: t('skills.skills.development.0.description'),
+          icon: <SiPython />
+        },
+        {
+          name: 'Scala',
+          level: 90,
+          description: t('skills.skills.development.1.description'),
+          icon: <SiScala />
+        },
+        {
+          name: 'Java',
+          level: 80,
+          description: t('skills.skills.development.2.description'),
+          icon: <FaJava />
+        },
+        {
+          name: 'TypeScript',
+          level: 60,
+          description: t('skills.skills.development.3.description'),
+          icon: <SiTypescript />
+        },
+        {
+          name: 'JavaScript',
+          level: 60,
+          description: t('skills.skills.development.4.description'),
+          icon: <SiJavascript />
+        },
+        {
+          name: 'SQL',
+          level: 80,
+          description: t('skills.skills.development.5.description'),
+          icon: <SiMysql />
+        },
+      ]
+    },
+    {
+      category: 'frameworks',
+      skills: [
+        {
+          name: 'PySpark',
+          level: 60,
+          description: t('skills.skills.frameworks.0.description'),
+          icon: <SiPython />
+        },
+        {
+          name: 'Apache Spark',
+          level: 90,
+          description: t('skills.skills.frameworks.1.description'),
+          icon: <SiApachespark />
+        },
+        {
+          name: 'React',
+          level: 60,
+          description: t('skills.skills.frameworks.2.description'),
+          icon: <SiReact />
+        },
+        {
+          name: 'Spring Boot',
+          level: 50,
+          description: t('skills.skills.frameworks.3.description'),
+          icon: <SiSpring />
+        }
+      ]
+    },
+    {
+      category: 'cloud_tools',
+      skills: [
+        {
+          name: 'Google Cloud Platform',
+          level: 90,
+          description: t('skills.skills.cloud_tools.0.description'),
+          icon: <SiGooglecloud />
+        },
+        {
+          name: 'BigQuery',
+          level: 90,
+          description: t('skills.skills.cloud_tools.1.description'),
+          icon: <SiGooglebigquery />
+        }
+      ]
+    },
+    {
+      category: 'tools',
+      skills: [
+        {
+          name: 'Git',
+          level: 90,
+          description: t('skills.skills.tools.0.description'),
+          icon: <SiGit />
+        },
+        {
+          name: 'JIRA',
+          level: 80,
+          description: t('skills.skills.tools.1.description'),
+          icon: <SiJirasoftware />
+        }
+      ]
+    }
+  ];
 
   return (
     <SkillsContainer
