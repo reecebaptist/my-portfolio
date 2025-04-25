@@ -24,7 +24,6 @@ const NavContainer = styled.nav<{ $overlay: boolean; $shadow: boolean }>`
 
 const Logo = styled(NavLink)`
   font-family: 'Times New Roman', serif;
-
   font-size: 1.5rem;
   text-decoration: none;
   color: inherit;

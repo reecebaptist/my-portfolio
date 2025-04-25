@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -52,6 +53,7 @@ export const CVButton = styled(MinimalButton)`
 `;
 
 interface JapaneseButtonProps {
+  path? : string;
   onClick?: () => void;
   labelKey?: string;
   initial?: any;
@@ -59,7 +61,7 @@ interface JapaneseButtonProps {
   transition?: any;
 }
 
-export const JapaneseButton = ({ onClick, labelKey = 'view_works', initial,animate,transition }: JapaneseButtonProps) => {
+export const JapaneseButton = ({ path, onClick, labelKey = 'view_works', initial,animate,transition }: JapaneseButtonProps) => {
   const { t } = useTranslation();
   
   return (
@@ -71,7 +73,9 @@ export const JapaneseButton = ({ onClick, labelKey = 'view_works', initial,anima
       animate={animate}
       transition={transition}
     >
+      <NavLink to={path || ""}>
       {t(labelKey)} <FaArrowRight style={{ marginLeft: '0.5rem' }} />
+      </NavLink>
     </MinimalButton>
   );
 };

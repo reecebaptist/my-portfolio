@@ -200,14 +200,14 @@ const Home = () => {
       </Subtitle>
       <ButtonGroup>
       <JapaneseButton
-        onClick={() => window.location.href = '/work'}
+        path="/work"
         labelKey="home.view_works"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.6 }}
       />
       <JapaneseButton
-        onClick={() => window.location.href = '/contact'}
+        path="/contact"
         labelKey="home.contact"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
