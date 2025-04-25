@@ -23,9 +23,9 @@
   },
   "work": {
     "title": "職歴と学歴",
-    "view_cv": "英語の履歴書を見る",
-    "view_rirekisho": "日本語の履歴書を見る",
-    "view_shoku": "職歴を見る",
+    "view_cv": "職務経歴書を見る",
+    "view_rirekisho": "履歴書を見る",
+    "view_shoku": "職務経歴書を見る",
     "workdata": [
       {
         "date": "2024年9月 - 現在",
