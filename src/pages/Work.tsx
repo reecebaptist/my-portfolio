@@ -163,7 +163,7 @@ const Work = () => {
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        onClick={() => window.open('/my-portfolio/CV_EN.pdf')}
+        onClick={() => window.open('/portfolio/CV_EN.pdf')}
         labelKey={t('work.view_cv')}
         >
       </JapaneseButton>
@@ -171,7 +171,7 @@ const Work = () => {
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        onClick={() => window.open('/my-portfolio/Rirekisho.pdf')}
+        onClick={() => window.open('/portfolio/Rirekisho.pdf')}
         labelKey={t('work.view_rirekisho')}
         >
         
@@ -180,7 +180,7 @@ const Work = () => {
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}  
-        onClick={() => window.open('/my-portfolio/Shokumukeirekisho.pdf')}
+        onClick={() => window.open('/portfolio/Shokumukeirekisho.pdf')}
         labelKey={t('work.view_shoku')}
         >
         
