@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "ホーム",
+    "about": "について",
+    "works": "作品",
+    "contact": "連絡"
+  },
+  "home": {
+    "title": "ポートフォリオへようこそ",
+    "subtitle": "日本の美学に触発されたミニマルで思慮深いデジタル体験を作成します。"
+  },
+  "about": {
+    "title": "私について",
+    "content": "私はシンプルさと優雅さを体現したデジタル体験を作成することに情熱を持ったデザイナー兼開発者です..."
+  },
+  "experience": {
+    "title": "職務経歴",
+    "view_cv": "履歴書を見る"
+  },
+  "skills": {
+    "title": "スキルと専門知識",
+    "categories": {
+      "design": "デザイン",
+      "development": "開発",
+      "tools": "ツール",
+      "principles": "原則"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "email": "メール",
+    "phone": "電話"
+  }
+}
