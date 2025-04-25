@@ -4,11 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { FaArrowRight } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-`;
 
 const MinimalButton = styled(motion.button)`
   background: transparent;
@@ -84,6 +79,18 @@ export const JapaneseButton = ({ path, onClick, labelKey = 'view_works', initial
 interface ButtonGroupProps {
     children: React.ReactNode;
   }
+  const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  gap: 1rem;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Switch to row for desktop */
+  }
+`;
+
+
   
   export const ButtonGroup = ({ children }: ButtonGroupProps) => {
     return <ButtonContainer>{children}</ButtonContainer>;
