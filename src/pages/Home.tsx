@@ -170,7 +170,7 @@ const Home = () => {
     },
     {
       title: 'SAP ERP Testing Suite',
-      description: 'SAP automation testing suite developed for FIORI Apps',
+      description: t('projects.projects.2.description'),
       image: sapImage,
       alt: 'SAP testing suite dashboard',
       skills: ['Playwright', 'TypeScript'] 
