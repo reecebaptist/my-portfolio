@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "work": "Experience",
+    "work": "Work",
     "skills": "Skills",
     "portfolio": "Portfolio"
   },
@@ -17,6 +17,7 @@
   "about": {
     "title": "About Me",
     "content": {
+      "0": "Hello! My name is Reece Dsouza.",
       "1": "I'm a software engineer with a deep focus on crafting resilient, scalable systems that power meaningful data-driven experiences. My work bridges the worlds of data engineering and backend development — designing robust pipelines, optimizing data flow, and building performant APIs that serve complex business needs.",
       "2": "With over 3 years of experience, I've collaborated across industries to turn raw data into actionable insight and backend architecture into seamless, user-facing functionality. My approach blends precision engineering with thoughtful design, always aiming for clarity, efficiency, and long-term maintainability."
     }
