@@ -1,3 +1,4 @@
+// src/i18n.ts
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -13,8 +14,14 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      order: ['path', 'navigator'], // Check URL path first
+      lookupFromPathIndex: 1, // Look for language in the first path segment
+      
+    },
     backend: {
-      loadPath: './locales/{{lng}}/{{ns}}.json',
+      loadPath: '/portfolio/locales/{{lng}}/{{ns}}.json',
+
     }
   });
 
