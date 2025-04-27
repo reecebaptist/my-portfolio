@@ -248,6 +248,9 @@ const Navbar = () => {
 
 {!isMobile && (
           <MenuItems>
+          <MenuItem to="/" onClick={handleNavClick} >
+            {t('navbar.home')}
+          </MenuItem>
           <MenuItem to="/about" onClick={handleNavClick} >
             {t('navbar.about')}
           </MenuItem>
@@ -282,6 +285,7 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
+              <MobileMenuItem to="/" onClick={handleNavClick} >{t('navbar.home')}</MobileMenuItem>
               <MobileMenuItem to="/about" onClick={handleNavClick} >{t('navbar.about')}</MobileMenuItem>
               <MobileMenuItem to="/work" onClick={handleNavClick} > {t('navbar.work')}</MobileMenuItem>
               <MobileMenuItem to="/skills" onClick={handleNavClick} >{t('navbar.skills')}</MobileMenuItem>
