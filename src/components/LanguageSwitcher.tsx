@@ -54,7 +54,7 @@ const LanguageSwitcher = () => {
       <LanguageTransition isVisible={isTransitioning} />
       <LanguageButton 
         onClick={() => changeLanguage('en')}
-        style={{ fontWeight: i18n.language === 'en' ? 'bold' : 'normal' }}
+        style={{ fontWeight: i18n.language === 'en' || i18n.language === 'en-US' ? 'bold' : 'normal' }}
       >
         EN
       </LanguageButton>
