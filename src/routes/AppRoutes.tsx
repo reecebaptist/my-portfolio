@@ -50,16 +50,6 @@ const AppRoutes = () => {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
-          {/* Redirect /jp/* to /* while preserving the language */}
-          <Route 
-            path="/jp/*" 
-            element={
-              <Navigate 
-                to={window.location.pathname.replace('/jp', '')} 
-                replace 
-              />
-            } 
-          />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
           <Route path="/skills" element={<Skills />} />
