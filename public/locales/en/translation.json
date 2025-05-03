@@ -8,8 +8,8 @@
     "portfolio": "Portfolio"
   },
   "home": {
-    "title": "Hi, I'm Reece",
-    "subtitle": "I develop data engineering pipelines and set up back-end services.",
+    "title": "Welcome to my Portfolio!",
+    "subtitle": "I'm Reece Dsouza. I develop data engineering pipelines and set up back-end services.",
     "view_works": "View Work History",
     "contact": "Contact Me",
     "scroll": "Scroll"

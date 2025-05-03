@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-// import { useTranslation } from 'react-i18next';
 
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -19,30 +18,10 @@ import ScrollToTop from '../components/ScrollToTop';
 
 const AppRoutes = () => {
   const location = useLocation();
-  // const { i18n } = useTranslation();
+
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [currentPath, setCurrentPath] = useState(location.pathname);
-  // const [initialLanguageSet, setInitialLanguageSet] = useState(false);
 
-
-
-//  // Handle language from URL on initial load
-//  useEffect(() => {
-//   if (initialLanguageSet) return;
-
-//   const path = window.location.pathname;
-//   if (path.includes('/jp/')) {
-//     i18n.changeLanguage('ja').then(() => {
-//       // Only remove /jp/ after language is fully loaded
-//       const newPath = path.replace('/jp', '');
-//       window.history.replaceState({}, '', newPath);
-//       setInitialLanguageSet(true);
-//     });
-//   } else {
-//     i18n.changeLanguage('en');
-//     setInitialLanguageSet(true);
-//   }
-// }, [i18n, initialLanguageSet]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
